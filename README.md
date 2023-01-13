@@ -1,4 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Deck.gl, Geoparquet and H3 example
+
+This example shows how to use deck.gl to render a geoparquet file with H3 hexagons.
+
+[Innovation doc](https://docs.google.com/document/d/1URDccLlWyPlpr_o5gCLaj_2G9qxTVIL41MMRGYXO1Vk/edit)
+
+## Use case
+
+* No API provided
+* No data transformation needed
+* SPA application
+* All data managed by the client
+* From a unique file (geoparquet)
+
+## The target
+
+Render a map with h3 layers from a geoparquet file containing hexagons with a color scale.
+
+## The data
+
+The data is a geoparquet file containing hexagons with a color scale.
+
+## The solution
+
+* Use deck.gl to render the map
+* Use geoparquet to read the file
+
+## Conclusions
+
+* The geoparquet file is very light, it's a good solution to store data and transmit it to the client
+* The geoparquet file is very easy to read with geoparquet library
+* The geoparquet file is very easy to render with deck.gl using the H3 layer
+
+## Problems pending to solve
+
+* H3 resolution depending on the zoom level
+* Filters on the fly
+* Limitations in mobile devices, only res 4 worked
 
 ## Getting Started
 
@@ -11,24 +48,3 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
