@@ -21,11 +21,14 @@
     "@types/react-dom": "18.0.8",
     "apache-arrow": "^10.0.0",
     "autoprefixer": "^10.4.13",
+    "dexie": "^3.2.2",
+    "dexie-react-hooks": "^1.1.1",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "h3-js": "^4.0.1",
+    "indexeddb-export-import": "^2.1.5",
     "mapbox-gl": "^2.10.0",
     "next": "13.0.3",
     "parquet-wasm": "^0.4.0-beta.5",
@@ -35,7 +38,11 @@
     "react-dom": "18.2.0",
     "react-map-gl": "^7.0.19",
     "tailwindcss": "^3.2.3",
-    "typescript": "4.8.4"
+    "typescript": "4.8.4",
+    "uuid": "^9.0.0"
   },
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.3.1",
+  "devDependencies": {
+    "@types/uuid": "^9.0.0"
+  }
 }
